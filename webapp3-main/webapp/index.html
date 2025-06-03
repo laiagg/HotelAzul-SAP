@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fiori App</title>
+        <script
+            id="sap-ui-bootstrap"
+            src="https://sapui5.hana.ondemand.com/1.71.73/resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_fiori_3"
+            data-sap-ui-libs="sap.m,sap.viz"
+            data-sap-ui-resourceroots='{"fiori": "./"}'
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+            data-sap-ui-async="true"
+            data-sap-ui-preload="false"
+            data-sap-ui-frameOptions="trusted"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body class="sapUiBody">
+        <div id="container"></div>
+
+        <script>
+            sap.ui.getCore().attachInit(function () {
+                new sap.ui.core.ComponentContainer({
+                    name: "fiori",
+                    async: true
+                }).placeAt("container");
+            });
+        </script>
+    </body>
+</html>

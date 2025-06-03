@@ -1,0 +1,93 @@
+<mvc:View
+    controllerName="fiori.controller.PaginaSecundaria"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:mc="sap.suite.ui.microchart"
+    xmlns:unified="sap.ui.unified">
+
+    <Page 
+        title="{filteredModel>/marcas/0/marca}" 
+        showNavButton="true" 
+        navButtonPress="onNavBack">
+        
+        <content>
+            <VBox 
+                alignItems="Center" 
+                justifyContent="Center" 
+                width="100%" 
+                class="sapUiSmallMarginTop">
+                
+                <Image 
+                    src="{filteredModel>/marcas/0/image}" 
+                    width="200px" 
+                    alt="{filteredModel>/marcas/0/marca}" />
+                
+                <mc:RadialMicroChart
+                    percentage="{filteredModel>/marcas/0/production}"
+                    total="100"
+                    size="L"
+                    alignContent="Center" />
+            </VBox>
+
+            <IconTabBar>
+                <items>
+                    <IconTabFilter text="Info Dispositivo">
+                        <VBox class="sapUiSmallMargin">
+                            <Text text="{filteredModel>/marcas/0/description}" />
+                            <Text text="{filteredModel>/marcas/0/details}" />
+                        </VBox>
+                    </IconTabFilter>
+
+                    <IconTabFilter text="Info Marca">
+                        <VBox class="sapUiSmallMargin">
+                            <Text text="{filteredModel>/marcas/0/DescriptionText}" />
+                            <Panel 
+                                headerText="Fundación" 
+                                expandable="true" 
+                                expanded="false">
+                                <content>
+                                    <Text text="{filteredModel>/marcas/0/anyo}" />
+                                </content>
+                            </Panel>
+                        </VBox>
+                    </IconTabFilter>
+
+                    <IconTabFilter text="Página web">
+                        <VBox class="sapUiSmallMargin">
+                            <Link 
+                                text="Visitar sitio web" 
+                                href="{filteredModel>/marcas/0/url}" 
+                                target="_blank" />
+                        </VBox>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+
+            <HBox 
+                alignItems="Center" 
+                justifyContent="Center" 
+                width="100%">
+                
+                <unified:Calendar 
+                    id="dynamicCalendar" 
+                    />
+                
+                <VBox class="sapUiSmallMarginLeft">
+                    <Button 
+                        text="Añadir Evento" 
+                        press="onAddDatePress" 
+                        class="sapUiSmallMarginTop" />
+                    <Button 
+                        text="Eliminar Evento" 
+                        press="onDeleteDatePress" 
+                        class="sapUiSmallMarginTop" />
+                    <Button 
+                        text="Editar Evento" 
+                        press="onEditDatePress" 
+                        class="sapUiSmallMarginTop" />
+                </VBox>
+            </HBox>
+        </content>
+    </Page>
+</mvc:View>

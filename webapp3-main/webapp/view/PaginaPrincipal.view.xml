@@ -1,0 +1,43 @@
+<mvc:View
+    controllerName="fiori.controller.PaginaPrincipal"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page">
+                    <headerContent>
+                        <Toolbar>
+                            <Button
+                                id="buttonHotelAzul"
+                                text="{i18n>buttonHotelAzul}"
+                                press="onButtonHotelAzulPress"
+                            />
+                            <ToolbarSpacer/>
+
+                            <Title text="Hotel Azul" level="H1"/>
+                            <ToolbarSpacer/>
+                            <Button
+                                id="buttonCuenta"
+                                text="{i18n>buttonCuenta}"
+                                press="onButtonCuentaPress"
+                            />
+                        </Toolbar>
+                        <!-- <Button
+                            id="button2"
+                            text="{i18n>button2Text}"
+                            press="onButton2Press"
+                        /> -->
+                    </headerContent>
+                    <content>
+                        <VBox class="sapUiSmallMargin">
+                            <Text text="Bienvenida a la Página Principal, Laia!" />
+                        </VBox>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

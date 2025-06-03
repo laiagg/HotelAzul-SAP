@@ -1,0 +1,150 @@
+{
+  "_version": "1.32.0",
+  "sap.app": {
+    "id": "fiori",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "ach": "ach"
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "sap-icon://task",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "flexEnabled": false,
+    "preload": "async",
+    "componentName": "fiori.Component",
+    "rootView": {
+      "viewName": "fiori.view.PaginaPrincipal",
+      "type": "XML",
+      "async": true,
+      "id": "PaginaPrincipal"
+    },
+    "dependencies": {
+			"minUI5Version": "1.108.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {},
+        "sap.ui.vbm": {},
+        "sap.f": {},
+        "sap.viz": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "fiori.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+          "routerClass": "sap.m.routing.Router",
+          "viewType": "XML",
+          "async": true,
+          "viewPath": "fiori.view",
+          "controlAggregation": "pages",
+          "controlId": "app",
+          "clearControlAggregation": false
+      },
+      "routes": [
+          {
+              "name": "RoutePaginaPrincipal",
+              "pattern": "",
+              "target": ["TargetPaginaPrincipal"]
+          },
+          {
+              "name": "RoutePaginaSecundaria",
+              "pattern": "PaginaSecundaria/{id}/{marca}",
+              "target": ["TargetPaginaSecundaria"]
+          },
+          {
+            "name": "RoutePaginaPrueba",
+            "pattern": "PaginaPrueba",
+            "target": ["TargetPaginaPrueba"]
+          },
+          {
+            "name": "RoutePaginaTreeTable",
+            "pattern": "PaginaTreeTable",
+            "target": ["TargetPaginaTreeTable"]
+          },
+          {
+            "name": "RoutePaginaMapa",
+            "pattern": "PaginaMapa",
+            "target": ["TargetPaginaMapa"]
+          }
+      ],
+      "targets": {
+          "TargetPaginaPrincipal": {
+              "viewType": "XML",
+              "transition": "slide",
+              "clearControlAggregation": false,
+              "viewId": "PaginaPrincipalUniqueID",
+              "viewName": "PaginaPrincipal"
+          },
+          "TargetPaginaSecundaria": {
+              "viewType": "XML",
+              "transition": "slide",
+              "clearControlAggregation": false,
+              "viewId": "PaginaSecundaria",
+              "viewName": "PaginaSecundaria"
+          },
+          "TargetPaginaPrueba":{
+            "viewType": "XML",
+              "transition": "slide",
+              "clearControlAggregation": false,
+              "viewId": "PaginaPruebaUniqueID",
+              "viewName": "PaginaPrueba"
+          },
+          "TargetPaginaTreeTable":{
+            "viewType": "XML",
+              "transition": "slide",
+              "clearControlAggregation": false,
+              "viewId": "PaginaTreeTableUniqueID",
+              "viewName": "PaginaTreeTable"
+          },
+          "TargetPaginaMapa":{
+            "viewType": "XML",
+              "transition": "slide",
+              "clearControlAggregation": false,
+              "viewId": "PaginaMapaUniqueID",
+              "viewName": "PaginaMapa"
+          }
+          
+      }
+    }
+
+  }
+}

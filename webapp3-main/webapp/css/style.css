@@ -1,0 +1,85 @@
+#dataTable .sapUiTableRowClicked {
+    background-color: #f0f8ff; 
+    transition: background-color 0.3s ease;
+}
+
+.sapMBtn:hover {
+    background-color: #bbcbf1;
+    color: #000; 
+}
+.sapMBtn:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+.sapMPanel {
+    background-color: #9ec6e4; 
+    border: 1px solid #528ad8; 
+    padding: 10px;
+}
+
+.sapMPanel .sapMText {
+    color: #333333; 
+}
+.sapMPage .sapMNavButton {
+    color: #1976d2; 
+}
+.custom-dialog {
+    margin: 20px !important; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+}
+
+/* estilos Carousel */
+.custom-carousel {
+    border: 2px solid #ddd; 
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.custom-carousel .sapMCrslInner > div {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.custom-carousel .sapMCrslInner img:hover {
+    transform: scale(1.1); 
+}
+.custom-carousel .sapMCrslIndicator {
+    background-color: #007acc; 
+}
+
+.custom-carousel .sapMCrslIndicatorActive {
+    background-color: #005f99; 
+}
+
+.sapMShellGlobalOuterBackground {
+    background-image: none;
+    background-color: #4A412A;
+}
+
+
+.mapContainer {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.overlayButton {
+    position: relative;
+    top: 20px; 
+    right: 20px;
+    z-index: 1000; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sapUiVbmDetailWindow {
+    width: 600px !important;
+    height: 400px !important;
+    min-width: 600px !important;
+    min-height: 400px !important;
+}

@@ -1,0 +1,8 @@
+<Dialog xmlns="sap.m" title="Fragment Example" class="sapUiResponsiveMargin" resizable="true">
+    <content>
+        <Text text="Dialogo del fragment" />
+    </content>
+    <beginButton>
+        <Button text="OK" press="onCloseDialogFragment"/>
+    </beginButton>
+</Dialog>
