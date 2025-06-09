@@ -8,12 +8,12 @@ sap.ui.define([
             console.log("Página Principal inicializada correctamente.");
         },
 
-        onButton1Press: function () {
-            console.log("Botón 1 presionado en Página Principal.");
-        },
-
-        onButton2Press: function () {
-            console.log("Botón 2 presionado en Página Principal.");
+        onButtonCuentaPress: function () {
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteMiCuenta");
         }
+
+        
+        
     });
 });

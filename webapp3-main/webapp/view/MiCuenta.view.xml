@@ -1,0 +1,20 @@
+<mvc:View
+    controllerName="fiori.controller.Micuenta"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    
+    <Page 
+        title="Mi cuenta" 
+        showNavButton="true" 
+        navButtonPress="onNavBack">
+        
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <Text text="Bienvenido a tu cuenta" />
+                <Input placeholder="Nombre de usuario" />
+                <Input placeholder="Correo electrónico" />
+                <Button text="Guardar" press="onGuardarPress" />
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

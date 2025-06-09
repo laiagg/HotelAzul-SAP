@@ -101,9 +101,9 @@
             "target": ["TargetPaginaTreeTable"]
           },
           {
-            "name": "RoutePaginaMapa",
-            "pattern": "PaginaMapa",
-            "target": ["TargetPaginaMapa"]
+            "name": "RouteMiCuenta",
+            "pattern": "MiCuenta",
+            "target": ["TargetMiCuenta"]
           }
       ],
       "targets": {
@@ -135,12 +135,12 @@
               "viewId": "PaginaTreeTableUniqueID",
               "viewName": "PaginaTreeTable"
           },
-          "TargetPaginaMapa":{
+          "TargetMiCuenta":{
             "viewType": "XML",
               "transition": "slide",
               "clearControlAggregation": false,
-              "viewId": "PaginaMapaUniqueID",
-              "viewName": "PaginaMapa"
+              "viewId": "MiCuentaUniqueID",
+              "viewName": "MiCuenta"
           }
           
       }
